@@ -222,10 +222,8 @@ hr {
 .card_link {
     height: 20px;
 }
-
 #projeto_container {
-    padding-top: 50px;
-    padding-bottom: -50px;
+    padding: 50px 20px; /* espaçamento superior/inferior e lateral */
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -234,9 +232,45 @@ hr {
     color: #A6A6A6;
     text-align: justify;
     font-size: 1em;
-    color: #A6A6A6;
-
+    background-image: url('../images/back-proj.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
+
+#projeto_content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px; /* espaço entre texto e imagem */
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px; /* limita o conteúdo para não esticar demais */
+}
+
+#projeto_text {
+    flex: 1 1 60%; /* ocupa cerca de 60% do espaço disponível */
+    min-width: 300px; /* evita que fique muito estreito em telas pequenas */
+    text-align: left;
+}
+
+#projeto_image {
+    flex: 1 1 35%; /* ocupa cerca de 35% do espaço disponível */
+    display: flex;
+    justify-content: flex-end;
+    min-width: 250px;
+    padding-top: 8%;
+}
+
+#projeto_image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* opcional, deixa a imagem mais suave */
+}
+
+
+
+
 
 #projeto_title_images {
     display: inline-flex;
@@ -419,9 +453,6 @@ footer a :hover {
         height: 171px;
     }
 
-    #projeto_container div {
-        padding-inline: 200px;
-    }
 
     /* FOOTER */
     #footer_logo_tw {
@@ -503,9 +534,7 @@ footer a :hover {
         height: 214px;
     }
 
-    #projeto_container div {
-        padding-inline: 200px;
-    }
+
 
     /* FOOTER */
     #footer_logo_tw {
@@ -520,4 +549,21 @@ footer a :hover {
         width: 15%;
     }
 
+}
+/* Layout responsivo para mobile */
+@media (max-width: 900px) {
+    #projeto_content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #projeto_text, #projeto_image {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+    #projeto_image {
+        justify-content: center;
+        margin-top: 20px;
+    }
 }
