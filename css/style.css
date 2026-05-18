@@ -434,7 +434,7 @@ footer{
 }
 
 #footer_logo_tw{
-    width:30%;
+    width:20%;
 }
 
 #footer_logo_github{
@@ -443,6 +443,9 @@ footer{
 
 #footer_logo_ecoSwitch{
     width:30%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 footer a:hover{
