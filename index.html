@@ -134,11 +134,18 @@
             <div id="projeto_content">
                 <div id="projeto_text">
                 <p>
-                    Este projeto, chamado <b>InfraCow</b>, propõe desenvolver uma aplicação mobile que, em conjunto com um sensor termográfico infravermelho, registre dados térmicos da região do saco lacrimal dos bovinos, com o objetivo de detectar suspeitas de Doença Respiratória Bovina (DRB). A aplicação incluirá informações como a medição do animal, a data da captura e os resultados da análise, utilizando estatística médica para validar sua eficácia, com o intuito de auxiliar no pré-diagnóstico e no manejo eficiente dos rebanhos. O sensor será acoplado a um suporte portátil, facilitando a medição pelo usuário e atribuindo essa leitura ao bovino correspondente por meio da tecnologia NFC presente nos próprios smartphones, utilizada para leitura dos brincos RFID dos animais. A aplicação fará a coleta das informações fornecidas pelo sensor, vinculando-as aos dados previamente cadastrados pelo proprietário do rebanho, promovendo um reconhecimento assertivo e ágil de possíveis variações térmicas nos animais. Para alcançar esse objetivo geral, foram definidos os seguintes objetivos específicos:
+                    <b>InfraCow</b> combina o sensor infravermelho MLX90614 com ESP32, aplicativo React Native e API Node.js/PostgreSQL para registrar temperaturas bovinas no rebanho. A medição sem contato é feita no saco lacrimal esquerdo. Prevê-se envio por cabo; o app associa animal, data e hora, armazena offline e sincroniza com a API quando conectado. A identificação pode ser manual ou por RFID, se disponível. A integração física sensor-app está pendente; testes computacionais usaram dados simulados.
                 </p>
+
+                <p>
+                    Em campo, 20 bovinos de duas propriedades tiveram três leituras comparadas à referência de contato na mesma região. O MAE foi 0,24 °C, o viés 0,00 °C e o RMSE cerca de 0,27 °C; 80% ficaram em ±0,3 °C e 100% em ±0,5 °C. Na análise exploratória de febre (retal ≥ 40,0 °C; ocular ≥ 36,3 °C), sensibilidade e VPP foram 66,7%, especificidade e VPN 94,1%, e acurácia 90,0%. Com apenas três animais febris, os resultados são preliminares: não diagnosticam DRB nem substituem avaliação veterinária.
+                </p>
+
+                <p><b>Objetivos específicos:</b></p>
+
                 <ul>
-                    <li>Aumentar a eficácia das produções derivadas de bovinos;</li>
-                    <li>Elevar a saúde e o tratamento precoce dos animais afetados por DRBs.</li>
+                    <li>Desenvolver a plataforma e o fluxo de coleta, armazenamento offline e sincronização.</li>
+                    <li>Avaliar a concordância térmica e estimar exploratoriamente a classificação de febre, sem tratá-la como diagnóstico de DRB.</li>
                 </ul>
                 </div>
                 <div id="projeto_image">
